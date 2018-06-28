@@ -1,9 +1,7 @@
-<h2>Hello World!</h2>
-Acceuil.vue.php
-
+<h2>Liste projets</h2>
 <table>
 	<?php
-		foreach($listeTaches as $object){
+		foreach($listeProjets as $object){
 			echo "<tr>";
 			foreach($object as $key => $value){
 				echo "<td>$value</td>";

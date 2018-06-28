@@ -1,16 +1,16 @@
 <?php
 	/* Retourne la liste des taches*/
-	function get_Taches($bdd){
-		$sql = 'SELECT * FROM tache';
+	function get_Projets($bdd){
+		$sql = 'SELECT * FROM projet';
 		$result = $bdd->query($sql);
 
 		if ($result->num_rows > 0) {
 			while ($row = $result->fetch_assoc())
 			{
-				$listeTaches[] = new tache($row);
+				$listeProjets[] = new projet($row);
 			}
-
 		}
-		return $listeTaches;
+		//var_dump($listeProjets);
+		return $listeProjets;
 	}
 ?>

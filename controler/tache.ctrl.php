@@ -1,5 +1,4 @@
 <?php
-
 	session_start();
 	foreach($_POST as $key=>$value){$$key=$value;}
 	foreach($_GET as $key=>$value){$$key=$value;}
@@ -10,14 +9,12 @@
 	//
     require_once('class/tache.class.php');
 	require_once('modele/tache.modele.php');
-    require_once('class/projet.class.php');
-	require_once('modele/projet.modele.php');
 
-   	$listeProjets = get_Projets($bdd);
+   	$listeTaches = get_Taches($bdd);
 
     //affichage
     require_once('includes/head.php');
-	require_once('view/projet.vue.php');
+	require_once('view/tache.vue.php');
     require_once('includes/footer.php');
 
     $bdd->close();
